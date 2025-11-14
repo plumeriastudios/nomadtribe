@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Style Guide — Lisa and the Jet Setters</title>
+  <meta name="description" content="Visual style guide for Lisa and the Jet Setters — palette and component samples." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* small page overrides for guide layout */
+    main { padding:2rem 1rem; }
+    .example { background: #fff; padding:1rem; border-radius:10px; box-shadow:0 8px 18px rgba(0,0,0,0.04); }
+    .row { display:flex; gap:1rem; align-items:center; flex-wrap:wrap; margin-top:1rem; }
+    pre { background:#fff; padding:0.75rem; border-radius:6px; border:1px solid rgba(0,0,0,0.04); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-top">
+      <div class="brand-wrap"><a class="brand" href="#">Lisa and the Jet Setters</a></div>
+      <div class="page-title">STYLE GUIDE</div>
+      <div class="header-spacer" aria-hidden="true"></div>
+    </div>
+    <nav class="site-nav-row" aria-label="Primary">
+      <div class="container nav-inner">
+        <ul class="nav-list">
+          <li><a class="nav-btn" href="#">HOME</a></li>
+          <li><a class="nav-btn" href="#">ARUBA</a></li>
+          <li><a class="nav-btn" href="#">BELIZE</a></li>
+          <li><a class="nav-btn" href="#">DOMINICAN REPUBLIC</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Color tokens</h1>
+    <div class="swatch-row">
+      <div>
+        <div class="swatch" style="background:var(--text)">Text<br><small style="font-size:0.8rem">#091819</small></div>
+        <div class="token-label">--text: #091819</div>
+      </div>
+      <div>
+        <div class="swatch" style="background:var(--background); color:var(--text); border:1px solid rgba(0,0,0,0.04)">Background<br><small style="font-size:0.8rem;color:var(--text)">#f5fcfb</small></div>
+        <div class="token-label">--background: #f5fcfb</div>
+      </div>
+      <div>
+        <div class="swatch" style="background:var(--primary)">Primary<br><small style="font-size:0.8rem">#55c3c3</small></div>
+        <div class="token-label">--primary: #55c3c3</div>
+      </div>
+      <div>
+        <div class="swatch" style="background:var(--secondary)">Secondary<br><small style="font-size:0.8rem">#ddb39e</small></div>
+        <div class="token-label">--secondary: #ddb39e</div>
+      </div>
+      <div>
+        <div class="swatch" style="background:var(--accent)">Accent<br><small style="font-size:0.8rem">#a3ca6a</small></div>
+        <div class="token-label">--accent: #a3ca6a</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:1.5rem;">Components preview</h2>
+
+    <section class="example">
+      <h3>Header & Navigation</h3>
+      <div class="row">
+        <div style="flex:1">
+          <div style="display:flex;gap:1rem;align-items:center">
+            <a class="brand" href="#">Brand (primary background)</a>
+            <div style="padding:0.6rem 1rem; background:var(--secondary); border-radius:6px; color:var(--text); font-weight:700">Nav band (secondary)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example" style="margin-top:1rem">
+      <h3>Buttons & Links</h3>
+      <div class="row">
+        <a class="cta" href="#">Primary CTA</a>
+        <button class="nav-cta">Button (primary)</button>
+        <a href="#" style="padding:0.35rem 0.7rem; border-radius:6px; background:#fff; border:1px solid rgba(0,0,0,0.06;">Secondary button</a>
+        <div style="font-size:0.95rem">Inline link: <a href="#">Learn more</a></div>
+      </div>
+    </section>
+
+    <section class="example" style="margin-top:1rem">
+      <h3>Subscribe form (example)</h3>
+      <form id="subscribe-form" class="row" style="max-width:560px;">
+        <input type="email" placeholder="you@example.com" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div style="margin-top:0.6rem; color:var(--muted)">Form button uses --primary for clear CTA contrast.</div>
+    </section>
+
+    <section class="example" style="margin-top:1rem">
+      <h3>Carousel dot (active)</h3>
+      <div class="row" style="align-items:center">
+        <div style="width:36px;height:36px;border-radius:50%;background:rgba(9,24,25,0.08);display:flex;align-items:center;justify-content:center">●</div>
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(163,202,106,0.14);color:#fff">● active</div>
+      </div>
+    </section>
+
+    <section class="example" style="margin-top:1rem">
+      <h3>Footer & links</h3>
+      <div class="row">
+        <div style="flex:1">
+          <div style="background:#e9e6e3;padding:1rem;border-radius:8px">
+            <div style="color:var(--text);font-weight:700">Footer</div>
+            <div style="margin-top:0.5rem"><a href="#">Footer link (primary)</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example" style="margin-top:1rem">
+      <h3>CSS tokens (quick)</h3>
+      <pre>:root {
+  --text: #091819;
+  --background: #f5fcfb;
+  --primary: #55c3c3;
+  --secondary: #ddb39e;
+  --accent: #a3ca6a;
+}</pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">Lisa and the Jet Setters</div>
+      <div class="footer-center">Style guide preview</div>
+      <div class="footer-right" aria-hidden="true"></div>
+    </div>
+  </footer>
+</body>
+</html>

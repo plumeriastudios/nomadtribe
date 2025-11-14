@@ -1,0 +1,11 @@
+{
+  "name": "wanderwithme-starter",
+  "version": "1.0.0",
+  "description": "Static starter with responsive photo carousel and image build script",
+  "scripts": {
+    "build-images": "node scripts/build-images.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.32.0"
+  }
+}
